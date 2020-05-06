@@ -1,0 +1,9 @@
+// Responsive UI
+// https://material.io/guidelines/layout/responsive-ui.html
+
+.l-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $container-width + $gutter;
+  width: 100%;
+}

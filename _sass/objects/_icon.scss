@@ -1,0 +1,36 @@
+// https://material.io/tools/icons/
+// https://css-tricks.com/ligature-icons/
+// https://github.com/edent/SuperTinyIcons/blob/master/README.md
+// https://codepen.io/andybelldesign/pen/WPqXYB
+
+// SVG icons need to include a focusable="false" attribute to keep IE from
+// giving them focus.
+// https://www.sarasoueidan.com/blog/accessible-icon-buttons/
+
+// Our most recommended approach when it comes to browser support and 
+// consistency across screen readers is to add a visually-hidden element as a 
+// sibling element to the <svg>. We also recommend adding aria-hidden=”true” to 
+// the <svg> element itself. This is to help prevent having any other text that
+// may be embedded within the SVG be announced by screen readers. Then, the only
+// text that should be announced would be the content within that visually-
+// hidden element.
+
+.o-icon {
+  height: 1em;
+  width: 1em;
+}
+
+// Icon Font (i.e. via IcoMoon)
+// ----------------------------
+
+[class*="o-fonticon-"] {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Woodgreen Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+} 

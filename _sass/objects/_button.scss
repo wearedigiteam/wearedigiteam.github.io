@@ -1,0 +1,44 @@
+.o-button {
+  appearance: none;
+  align-items: center;
+  background-color: transparent;
+  border: solid 3px #fff;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;  
+  justify-content: center;
+  letter-spacing: 3px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in;
+  word-spacing: 2px;
+  // transition: box-shadow 0.15s ease-in-out;
+
+  @supports (display: inline-flex) {
+    display: inline-flex;
+    height: 3.25em;
+  }
+
+  &:hover {
+    background-color: #fff;
+    box-shadow: none;
+    color: $color-primary;
+  }
+
+  @include media("<small") {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    width: 100%;
+  }
+}
+
+
+// Breakout button
+// https://hankchizljaw.com/wrote/create-a-semantic-breakout-button-to-make-an-entire-element-clickable/
+
+// Fade Out Siblings
+// https://www.trysmudford.com/blog/fade-out-siblings-css-trick/

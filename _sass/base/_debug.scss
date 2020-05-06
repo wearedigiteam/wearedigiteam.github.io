@@ -1,0 +1,72 @@
+body {
+  background: linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,0%,0%,.5) 95%) 50% 0/8px 8px;
+
+  &:before {
+    content: "default";
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+    z-index: 100;
+    padding: 1ch;
+    background: rgba(0, 0, 0, 0.67);
+    color: rgba(255, 255, 255, 0.75);
+    font: bold 0.85rem Lucida Grande, sans-serif;
+  }
+}
+
+// Viewport = all (xsmall)
+// -----------------------
+@include media("<small") {
+  body::before {
+    content: "xsmall";
+  }
+}
+
+// Viewport = small
+// ----------------
+@include media(">=small", "<medium") {
+  body::before {
+    content: "small";
+  }
+}
+
+// Viewport = medium
+// -----------------
+@include media(">=medium", "<large") {
+  body::before {
+    content: "medium";
+  }
+}
+
+// Viewport = large
+// ----------------
+@include media(">=large", "<xlarge") {
+  body::before {
+    content: "large";
+  }
+}
+
+// Viewport = xlarge
+// -----------------
+@include media(">=xlarge") {
+  body::before {
+    content: "xlarge";
+  }
+}
+
+// Some elements will cause a horizontal scroll bar to appear, due to the width 
+// of those elements.
+
+// The easiest way to find the cause of this issue is to use CSS outline. Addy 
+// Osmani has shared a very handy script that can be added to the browser 
+// console to outline every element on the page.
+
+// [].forEach.call($$("*"), function(a) {
+//   a.style.outline =
+//     "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16);
+// });
+
+// Position Sticky
+// ---------------
+// When you define an element with position: sticky you’re automatically defining the parent element as a sticky container! 
+// This is very important to remember! The container is the scope of the sticky item, and the item can’t get out of its sticky container.

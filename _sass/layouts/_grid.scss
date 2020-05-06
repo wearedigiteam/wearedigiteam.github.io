@@ -1,0 +1,129 @@
+// Responsive UI
+// https://material.io/guidelines/layout/responsive-ui.html
+
+.l-row {
+  margin-top: 0;
+  padding: ($gutter / 2);
+  padding: calc(var(--grid-gutter) / 2);
+
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+  @supports (display: flex) and (flex-wrap: wrap) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  > * {
+    box-sizing: border-box;
+    margin-top: 0;
+    min-height: 1%;
+    padding: ($gutter / 2);
+    padding: calc(var(--grid-gutter) / 2);
+  }
+}
+
+// https://tobiasahlin.com/blog/flexbox-break-to-new-row/
+/* Inserting a collapsed row between two flex items will make 
+ * the flex item that comes after it break to a new row */
+ .break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* Use a collapsed column to break to a new column */
+.break-column {
+  flex-basis: 100%;
+  width: 0;
+}
+
+// Breakpoint-based columns
+// Broadly-defined breakpoints for all, xsmall, small, medium, large and
+// extra-large viewports.
+// -----------------------------------------------------------------------------
+
+// Viewport = all
+// --------------
+
+@for $i from 1 through $columns {  
+  .l-col-#{$i} {
+    flex-basis: percentage($i / $columns); 
+    max-width: percentage($i / $columns);
+  }
+}
+
+// Viewport = xsmall
+// ----------------
+
+@include media("<small") {
+  @for $i from 1 through $columns {
+    .xs-l-col-#{$i} {
+      flex-basis: percentage($i / $columns); 
+      max-width: percentage($i / $columns);
+    }
+  }
+}
+
+// Viewport = small
+// ----------------
+
+@include media(">=small", "<medium") {
+  @for $i from 1 through $columns {
+    .sm-l-col-#{$i} {
+      flex-basis: percentage($i / $columns); 
+      max-width: percentage($i / $columns);
+    }
+  }
+}
+
+// Viewport = medium
+// -----------------
+
+@include media(">=medium", "<large") {
+  @for $i from 1 through $columns {
+    .md-l-col-#{$i} {
+      flex-basis: percentage($i / $columns); 
+      max-width: percentage($i / $columns);
+    }
+  }
+}
+
+// Viewport = large
+// ----------------
+
+@include media(">=large", "<xlarge") {
+  @for $i from 1 through $columns {
+    .lg-l-col-#{$i} {
+      flex-basis: percentage($i / $columns); 
+      max-width: percentage($i / $columns);
+    }
+  }
+}
+
+// Viewport = xlarge
+// -----------------
+
+@include media(">=xlarge") {
+  @for $i from 1 through $columns {
+    .xl-l-col-#{$i} {
+      flex-basis: percentage($i / $columns); 
+      max-width: percentage($i / $columns);
+    }
+  }
+}
+
+// The Flexbox Albatross
+// 50rem represents the ideal width of each flex child.
+// http://www.heydonworks.com/article/the-flexbox-holy-albatross-reincarnated
+// https://vimeo.com/350678401
+// ---------------------
+
+.l-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -($gutter / 2);
+
+  > * {
+    flex-grow: 1;
+    flex-basis: calc((50rem - (100% - #{$gutter})) * 999);
+    margin: ($gutter / 2);
+  }
+}

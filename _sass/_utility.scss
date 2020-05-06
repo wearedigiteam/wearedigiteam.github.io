@@ -1,0 +1,413 @@
+// Flex alignment
+// --------------
+$flex-properties: (flex-wrap, flex-wrap, flex-wrap, justify-content, justify-content, justify-content, justify-content, justify-content, align-items, align-items, align-items, align-items, align-items, align-self, align-self, align-self, align-self, align-self, flex-direction, flex-direction, flex-direction, flex-direction);
+$flex-values: (wrap, nowrap, wrap-reverse, flex-start, flex-end, center, space-between, space-around, flex-start, flex-end, baseline, center, stretch, flex-start, flex-end, baseline, center, stretch, column, column-reverse, row, row-reverse);
+ 
+@for $i from 1 to length($flex-properties) {
+  .#{nth($flex-properties, $i) + "-" + nth($flex-values, $i)} {
+    #{nth($flex-properties, $i)}: #{nth($flex-values, $i)} 
+  }
+}
+
+@include media(">=600px") {
+  @for $i from 1 to length($flex-properties) {
+    .sm-#{nth($flex-properties, $i) + "-" + nth($flex-values, $i)} {
+      #{nth($flex-properties, $i)}: #{nth($flex-values, $i)} 
+    }
+  } 
+}
+
+@include media(">=1024px") {
+  @for $i from 1 to length($flex-properties) {
+    .md-#{nth($flex-properties, $i) + "-" + nth($flex-values, $i)} {
+      #{nth($flex-properties, $i)}: #{nth($flex-values, $i)} 
+    }
+  } 
+}
+
+@include media(">=1440px") {
+  @for $i from 1 to length($flex-properties) {
+    .lg-#{nth($flex-properties, $i) + "-" + nth($flex-values, $i)} {
+      #{nth($flex-properties, $i)}: #{nth($flex-values, $i)} 
+    }
+  } 
+}
+
+@include media(">=1920px") {
+  @for $i from 1 to length($flex-properties) {
+    .xl-#{nth($flex-properties, $i) + "-" + nth($flex-values, $i)} {
+      #{nth($flex-properties, $i)}: #{nth($flex-values, $i)} 
+    }
+  } 
+}
+
+// Text alignment
+// --------------
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+// https://www.sitepoint.com/introducing-the-css-text-align-last-property/
+.text-last-center {
+  text-align-last: center;
+}
+
+@include media(">=small") {
+  .sm-text-left {
+    text-align: left;
+  }
+  
+  .sm-text-center {
+    text-align: center;
+  }
+  
+  .sm-text-right {
+    text-align: right;
+  }
+  
+  .sm-text-upper {
+    text-transform: uppercase;
+  }
+}
+
+@include media(">=1024px") {
+  .md-text-left {
+    text-align: left;
+  }
+  
+  .md-text-center {
+    text-align: center;
+  }
+  
+  .md-text-right {
+    text-align: right;
+  }
+  
+  .md-text-upper {
+    text-transform: uppercase;
+  }
+}
+
+@include media(">=large") {
+  .lg-text-left {
+    text-align: left;
+  }
+  
+  .lg-text-center {
+    text-align: center;
+  }
+  
+  .lg-text-right {
+    text-align: right;
+  }
+  
+  .lg-text-upper {
+    text-transform: uppercase;
+  }
+}
+
+@include media(">=1920px") {
+  .xl-text-left {
+    text-align: left;
+  }
+  
+  .xl-text-center {
+    text-align: center;
+  }
+  
+  .xl-text-right {
+    text-align: right;
+  }
+  
+  .xl-text-upper {
+    text-transform: uppercase;
+  }
+}
+
+// Font weight
+// -----------
+
+.font-100 {
+  font-weight: 100;
+}
+
+.font-200 {
+  font-weight: 200;
+}
+
+.font-300 {
+  font-weight: 300;
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-700 {
+  font-weight: 700;
+}
+
+// Leading (based on 1em = 16 pixel)
+// ---------------------------------
+
+.leading-1 {
+  letter-spacing: 0.0625em;
+}
+
+.leading-2 {
+  letter-spacing: 0.125em;
+}
+
+.leading-3 {
+  letter-spacing: 0.1875em;
+}
+
+// Foreground colors
+// -----------------
+
+.color-white {
+  color: #fff;
+}
+
+.color-black {
+  color: #000;
+}
+
+.color-default {
+  color: $color-default;
+}  
+
+.color-primary {
+  color: $color-primary;
+}  
+
+.color-alternate {
+  color: $color-alternate;
+}  
+
+.color-gray {
+  color: $color-gray;
+}
+
+// Spacing
+//
+// https://voices.basedesign.com/spacings-and-css-custom-properties-bdae00eaf3f1
+//
+// Markup:
+//
+// Styleguide Spacing
+.gutter-small {
+
+}
+
+.gutter-default {
+
+}
+
+.gutter-medium {
+
+}
+
+.gutter-large {
+
+}
+
+.gutter-xlarge {
+
+}
+
+// Gutters / padding
+// Due to the fact that the unit is em, apply this to an element that does not 
+// have anything other than the default font size applied to it.
+// -----------------------------------------------------------------------------
+
+@for $i from 0 through 16 {
+  .margin-top-#{$i} {
+    margin-top: ($gutter / 2) * $i;
+  }
+
+  .margin-bottom-#{$i} {
+    margin-bottom: ($gutter / 2) * $i;
+  }
+
+  .padding-top-#{$i} {
+    padding-top: ($gutter / 2) * $i;
+  }
+
+  .padding-bottom-#{$i} {
+    padding-bottom: ($gutter / 2) * $i;
+  }
+}
+
+
+// Custom widths (by 10s)
+// ----------------------
+
+.width-100 {
+  width: 100%;
+}
+
+@for $i from 0 through $columns {
+  .maxwidth-#{$i} {
+    max-width: ($column-width + $gutter) * $i - $gutter;
+  }
+}
+
+// Display type 
+// ------------
+
+.block {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@include media("<small") {
+  .xs-block {
+    display: block;
+  } 
+
+  .xs-hide {
+    display: none !important;
+  }
+}
+
+@include media(">=small", "<medium") {
+  .sm-block {
+    display: block;
+  }
+
+  .sm-hide {
+    display: none !important;
+  }
+}
+
+// Visibility Toggle
+// -----------------
+
+.u-fadeOut {
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+  visibility: hidden;
+}
+
+.u-fadeIn {
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+  visibility: visible;
+}
+
+// Cross-browser Responsive SVGs and Videos
+//
+// Forces inline <svg> elements to be responsive based on the viewport 
+// dimensions. Use a padding-bottom inline style for the aspect ratio
+// (height / width * 100%).
+//
+// Markup:
+// <div class="embed"><svg></svg></div>
+//
+// Styleguide Utility.embed
+.embed {
+  height: 0;
+  padding: 0;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+
+  > * {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+//Responsive Iframe
+//
+// Aspect ratio based iframe sizing.
+// https://css-tricks.com/responsive-iframes/
+// 
+// Markup:
+//
+// <div style="--aspect-ratio: 16/9;">
+//   <iframe src="https://css-tricks.com" width="1600" height="900" frameborder="0"></iframe>
+// </div>
+// Styleguide Utility.ResponsiveIframe
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+[style*="--aspect-ratio"] > img {  
+  height: auto;
+} 
+@supports (--custom:property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }  
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }  
+}
+
+// Hidden (accessible) content
+// 
+// Allow for content to be hidden visually but visible for screen readers.
+//
+// Markup:
+// <div class="u-visuallyhidden">Lorem ipsum dolar</div>
+//
+// Styleguide Utility.hidden
+.visuallyhidden {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  height: 1px; 
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+
+  &--focusable:focus,
+  &--focusable:active {
+    clip: auto;
+    clip-path: none;
+    height: auto;
+    margin: auto;
+    overflow: visible;
+    width: auto;
+    white-space: normal;
+  }
+}

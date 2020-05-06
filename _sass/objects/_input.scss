@@ -1,0 +1,118 @@
+// Input modes (mobile)
+// https://css-tricks.com/everything-you-ever-wanted-to-know-about-inputmode/
+
+// Floating labels
+// https://dev.to/adrianbdesigns/let-s-create-a-floating-label-input-with-html-and-css-only-4mo8
+.o-label {
+  color: #b7b7b7;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.625rem;
+}
+
+.o-input,
+.o-select {  
+  border: solid 1px #252525;
+  border-radius: 0;
+  color: $color-default;
+  height: 3.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: border-color 0.25s ease-in;
+  width: 100%;
+  
+  &::placeholder {
+    color: $color-gray;
+  }
+  
+  &:focus {
+    border-color: $color-primary;
+    outline: 0;
+  }
+}
+
+.o-input {
+  appearance: none;
+}
+
+// Custom styling available
+// https://github.com/filamentgroup/select-css/blob/master/src/select-css.css
+.o-select {
+  border: 0;
+  outline: 1px inset #252525;
+  outline-offset: -1px
+}
+
+// Input + Button
+// --------------
+
+.o- {
+  display: flex;
+  
+  > * {
+    margin-top: 0;
+  }
+}
+
+// 4 CSS layouts without using media queries
+// @ref https://polypane.app/blog/4-css-layouts-without-using-media-queries
+// -----------------------------------------
+
+// form {
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   & > input {
+//     flex: 1 1 10ch;
+//     margin: 0.5rem;
+
+//     &[type='email'] {
+//       flex: 3 1 30ch;
+//     }
+//   }
+// }
+
+.o-input-radio {
+
+  > label {
+    display: inline-block;
+    margin-top: 0;
+    padding-left: 1.5em;
+    padding-top: 0.1875em;
+    position: relative;
+
+    &::before {
+      border: solid 2px $color-gray;
+      border-radius: 100%;
+      content: "";
+      height: 1em;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 1em;
+    }
+  }
+
+  > input[type="radio"],
+  > input[type="checkbox"] {
+    @extend .visuallyhidden;
+
+    &:checked ~ label::before {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      box-shadow: inset 0 0 0 2px white;
+    }
+  }
+}
+
+// https://www.a11ywithlindsey.com/blog/create-custom-keyboard-accesible-checkboxes/
+.o-input-checkbox {
+  @extend .o-input-radio;
+
+  > label {
+
+    &::before {
+      border-radius: 0;
+    }
+  }
+}

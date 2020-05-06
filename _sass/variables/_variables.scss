@@ -1,0 +1,34 @@
+$font-sans-serif:   "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-headings:     "Montserrat", sans-serif;
+$font-serif:        "Times New Roman", serif;
+
+$base-font-size:    1rem;
+$base-line-height:  1.5;
+
+$columns:           12;
+$gutter:            1.5rem;
+$margins:           1rem;
+$breakpoint-min:    20em;
+$breakpoint-max:    100em;
+$column-width:      7.625rem;
+$container-width:   75rem;      // 1200px
+
+// Breakpoints
+// https://material.io/design/layout/responsive-layout-grid.html#breakpoints
+// https://material.io/devices/
+// http://include-media.com/
+
+$breakpoints: (
+  '360px'   : 22.5em,
+  '400px'   : 25em,
+  '480px'   : 30em,
+  'small'   : 37.5em,
+  '720px'   : 45em,
+  '840px'   : 52.5em,
+  '960px'   : 60em,
+  'medium'  : 64em,
+  '1280px'  : 80em,
+  'large'   : 90em,
+  '1600px'  : 100em,
+  'xlarge'  : 120em
+);

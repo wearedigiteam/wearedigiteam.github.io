@@ -1,0 +1,198 @@
+:root {
+  --grid-gutter: #{$gutter};
+  --link-color: #{$color-primary}
+  --text-underline: underline;
+  --text-underline-hover: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+// Elastic Scroll Disable
+// https://developers.google.com/web/updates/2017/11/overscroll-behavior
+// ----------------------
+
+// body {
+//   overscroll-behavior: none;
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+// http://darktef.github.io/posts/2017-03-offset-html-anchors-for-fixed-header-with-css
+// :target {
+//   display: block;
+//   position: relative;
+//   top: -120px; 
+//   visibility: hidden;
+// }
+
+// Enhance scrollbar of page, if necessary
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars
+// https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+
+* + * {
+  margin-top: 1.5em;
+}
+
+// Material margin reset 
+[class^="mdc-"] {
+  * + * {
+    margin-top: 0;
+  }
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action#manipulation
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+// https://hiddedevries.nl/en/blog/2017-04-11-on-hiding-content
+[hidden] {
+  display: none;
+}
+
+body,
+br,
+dt,
+dd,
+th,
+td,
+option {
+  margin-top: 0;
+}
+
+html {
+  color: $color-default;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: var(--text-underline);
+  transition: color 0.15s ease-in;
+
+  text-decoration-color: #EA215A;
+  // text-decoration-thickness: .125em;
+  // text-underline-offset: 1.5px;
+  // text-decoration-skip-ink: auto;
+  
+  // https://codepen.io/AllThingsSmitty/pen/MOYNBO
+  &:focus {
+    outline-offset: 0.15em;
+  }
+
+  &:focus-visible {
+
+  }
+
+  &:focus-within {
+    
+  }
+
+  &:hover {
+    color: var(--link-color-rollover);
+    text-decoration: var(--text-underline-hover);
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px $color-gray;
+}
+
+img {
+  border: 0;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  max-width: 100%;
+}
+
+svg {
+  fill: currentColor;
+
+  &[role="img"] {
+    display: block;
+  }
+}
+
+blockquote {
+  
+}
+
+cite {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+}
+
+ul,
+ol {
+  padding-left: 1rem;
+}
+
+li + li {
+  margin-top: 0.75em;
+}
+
+// Scrollable table example:
+// http://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
+// 
+// For data tables, consider using `font-feature-settings: "tnum"` to 
+// align numbers properly.
+table {
+  border-collapse: collapse;
+  width: 100%;
+  
+  thead {
+    
+    > tr > td,
+    > tr > th {
+      border-bottom: solid 2px #e6e6e6;
+      text-align: left;
+      padding: 0 0.8em 0.8em;
+    }
+  }
+
+  tbody {
+    > tr > td,
+    > tr > th {
+      border-bottom: solid 2px #e6e6e6;
+      padding: 1.25em;
+      // Make all the text in the cells selectable by a single click.
+      // https://css.christmas/2019/5
+      // user-select: all;
+      // cursor: cell;
+    }
+
+    > tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+  }
+}
