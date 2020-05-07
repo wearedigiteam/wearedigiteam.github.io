@@ -1,0 +1,13 @@
+.c-masthead {
+  background-color: #000;
+  color: #fff;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    margin-top: 0;
+  }
+}

@@ -2,26 +2,21 @@
   appearance: none;
   align-items: center;
   background-color: transparent;
-  border: solid 3px #fff;
+  border: solid 1px $color-primary;
   border-radius: 0;
   box-shadow: none;
   color: #fff;
-  display: inline-block;
-  font-size: 1em;
+  display: inline-flex;
+  font-size: 0.875rem;
   font-weight: 700;  
+  height: 2.5em;
   justify-content: center;
-  letter-spacing: 3px;
   padding: 0.5em 1em;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: lowercase;
   transition: all 0.15s ease-in;
-  word-spacing: 2px;
+  min-width: 150px;
   // transition: box-shadow 0.15s ease-in-out;
-
-  @supports (display: inline-flex) {
-    display: inline-flex;
-    height: 3.25em;
-  }
 
   &:hover {
     background-color: #fff;
@@ -29,10 +24,13 @@
     color: $color-primary;
   }
 
-  @include media("<small") {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    width: 100%;
+  &--ghost {
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+    }
   }
 }
 

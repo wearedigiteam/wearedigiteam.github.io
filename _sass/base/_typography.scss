@@ -30,12 +30,21 @@ body {
 
 h1,
 .o-text-h1 {
-  @include fluid-type(font-size, $breakpoint-min, $breakpoint-max, 1.25em, 4.375em);
+  font-size: 6.25rem;
+  font-weight: 300;
+  line-height: 1.125;
 }
 
+.o-text-hero {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+// Roboto | 40 pixels | Light
 h2,
 .o-text-h2 {
-  @include fluid-type(font-size, $breakpoint-min, $breakpoint-max, 1.875em, 3.75em);
+  font-size: 2.5rem;
+  font-weight: 300;
 } 
 
 // Monserrat | 25 pixels | Light | Black

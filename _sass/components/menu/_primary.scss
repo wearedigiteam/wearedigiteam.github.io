@@ -4,42 +4,10 @@
 // https://codepen.io/skreborn/pen/ryvqLE
 
 .c-menu-primary {
-  overflow: hidden;
-
-  * {
-    margin-top: 0;
-  }
-  
-  &__list {
-    display: flex;
-    
-    > * {
-      margin: 0 1.5rem 0;
-    }
-
-    &__item {
-
-      &:hover,
-      &:focus-within {
-        .c-menu-primary__dropdown {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  &__dropdown {
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    opacity: 0;
-    position: absolute;
-    transition: clip-path 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }  
-}
-
-// Interaction Media Features
-// https://www.w3.org/TR/mediaqueries-4/#mf-interaction
-
-@media (hover: hover) {
-  
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 1600px;
+  transform: translateX(-50%);
 }

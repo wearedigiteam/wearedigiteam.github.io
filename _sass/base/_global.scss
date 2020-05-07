@@ -1,4 +1,9 @@
 :root {
+  --gutter-small: 1.25rem;
+  --gutter-default: 2.5rem;
+  --gutter-medium: 3.75rem;
+  --gutter-large: 5rem;
+  --gutter-xlarge: 6.25rem;
   --grid-gutter: #{$gutter};
   --link-color: #{$color-primary}
   --text-underline: underline;
@@ -19,9 +24,9 @@
 // https://developers.google.com/web/updates/2017/11/overscroll-behavior
 // ----------------------
 
-// body {
-//   overscroll-behavior: none;
-// }
+body {
+  overscroll-behavior: none;
+}
 
 html {
   scroll-behavior: smooth;
