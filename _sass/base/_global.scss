@@ -4,8 +4,8 @@
   --gutter-medium: 3.75rem;
   --gutter-large: 5rem;
   --gutter-xlarge: 6.25rem;
-  --grid-gutter: #{$gutter};
-  --link-color: #{$color-primary}
+  --grid-gutter: $gutter;
+  --link-color: $color-primary
   --text-underline: underline;
   --text-underline-hover: none;
 }
@@ -109,13 +109,13 @@ a {
     outline-offset: 0.15em;
   }
 
-  &:focus-visible {
+  // &:focus-visible {
 
-  }
+  // }
 
-  &:focus-within {
+  // &:focus-within {
     
-  }
+  // }
 
   &:hover {
     color: var(--link-color-rollover);
@@ -147,9 +147,9 @@ svg {
   }
 }
 
-blockquote {
+// blockquote {
   
-}
+// }
 
 cite {
   display: block;
