@@ -9,7 +9,7 @@ $columns:           8;
 $gutter:            1.25rem;
 $margins:           1rem;
 $breakpoint-min:    20em;
-$breakpoint-max:    100em;
+$breakpoint-max:    73.75em;
 $column-width:      7.625rem;
 $container-width:   73.75rem;      // 1200px
 
@@ -32,3 +32,17 @@ $breakpoints: (
   '1600px'  : 100em,
   'xlarge'  : 120em
 );
+
+:root {
+  @include media("<small") {
+    --fontsize-h1: 2.8125rem;
+    --fontsize-hero: 2.5rem;
+    --region-padding: 3.125rem;
+  }
+
+  @include media(">=small", "<medium") {
+    --region-padding: 3.75rem;
+    --fontsize-h1: 3.75rem;
+    --fontsize-hero: 3.25rem;
+  }
+}
