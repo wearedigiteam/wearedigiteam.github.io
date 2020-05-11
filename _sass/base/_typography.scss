@@ -30,13 +30,13 @@ body {
 
 h1,
 .o-text-h1 {
-  font-size: 6.25rem;
+  font-size: var(--fontsize-h1, 6.25rem);
   font-weight: 300;
   line-height: 1.125;
 }
 
 .o-text-hero {
-  font-size: 5rem;
+  font-size: var(--fontsize-hero, 5rem);
   font-weight: 700;
 }
 
@@ -45,6 +45,7 @@ h2,
 .o-text-h2 {
   font-size: 2.5rem;
   font-weight: 300;
+  line-height: 1.2;
 } 
 
 // Monserrat | 25 pixels | Light | Black
@@ -69,3 +70,20 @@ h5,
 // .o-text-h6 {
 
 // }
+
+.o-text-subheader {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.o-text-caption {
+  font-size: 0.875rem;
+  letter-spacing: 0.2142em;
+}
+
+.o-text-small {
+  font-size: 0.75rem;
+}
