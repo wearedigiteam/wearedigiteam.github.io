@@ -1,7 +1,6 @@
-.l-region {
-  --padding: 6.25rem;
+.l-region {  
   background-color: #fff;
   margin-top: 0;
-  padding-bottom: var(--padding);
-  padding-top: var(--padding);
+  padding-bottom: var(--region-padding, 6.25rem);
+  padding-top: var(--region-padding, 6.25rem);
 }
