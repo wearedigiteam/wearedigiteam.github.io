@@ -9,7 +9,7 @@
   display: inline-flex;
   font-size: 0.875rem;
   font-weight: 700;  
-  height: 2.5em;
+  height: 2.5rem;
   justify-content: center;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -17,6 +17,16 @@
   transition: all 0.15s ease-in;
   min-width: 150px;
   // transition: box-shadow 0.15s ease-in-out;
+
+  &--medium {
+    border-width: 2px;
+    height: 3.75rem;
+    font-size: 1.25rem;
+  }
+
+  &--full {
+    width: 100%;
+  }
 
   &:hover {
     background-color: #fff;
@@ -26,9 +36,12 @@
 
   &--ghost {
     background-color: transparent;
+    border-color: var(--button-ghost-border, #{$color-primary});
+    color: #fff;
 
     &:hover {
-      background-color: $color-primary;
+      background-color: var(--button-ghost-background, #{$color-primary});
+      border-color: transparent;
       color: #fff;
     }
   }

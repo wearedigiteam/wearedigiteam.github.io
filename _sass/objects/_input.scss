@@ -12,22 +12,30 @@
 
 .o-input,
 .o-select {  
-  border: solid 1px #252525;
+  border: solid 2px transparent;
   border-radius: 0;
   color: $color-default;
-  height: 3.375rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  height: 2.5rem;
+  padding: 0.5em 1em;
   transition: border-color 0.25s ease-in;
   width: 100%;
+
+  &--multiline {
+    min-height: 9.375rem;
+    padding: 1em;
+  }
   
   &::placeholder {
-    color: $color-gray;
+    color: #cecece;
   }
   
   &:focus {
-    border-color: $color-primary;
-    outline: 0;
+    // border-color: $color-primary;
+    // outline: 0;
+  }  
+
+  &:focus:invalid {
+    outline: solid 3px #c00;
   }
 }
 
@@ -46,13 +54,13 @@
 // Input + Button
 // --------------
 
-.o- {
-  display: flex;
+// .o- {
+//   display: flex;
   
-  > * {
-    margin-top: 0;
-  }
-}
+//   > * {
+//     margin-top: 0;
+//   }
+// }
 
 // 4 CSS layouts without using media queries
 // @ref https://polypane.app/blog/4-css-layouts-without-using-media-queries
