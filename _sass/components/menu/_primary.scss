@@ -11,4 +11,8 @@
   width: 100%;
   max-width: 1600px;
   transform: translateX(-50%);
+  
+  @include media(">=small") {
+    padding: 0.625rem;
+  }
 }
