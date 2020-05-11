@@ -29,10 +29,10 @@
     color: #cecece;
   }
   
-  &:focus {
-    // border-color: $color-primary;
-    // outline: 0;
-  }  
+  // &:focus {
+  //   // border-color: $color-primary;
+  //   // outline: 0;
+  // }  
 
   &:focus:invalid {
     outline: solid 3px #c00;
