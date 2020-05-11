@@ -220,7 +220,11 @@ $flex-values: (wrap, nowrap, wrap-reverse, flex-start, flex-end, center, space-b
 .background-primary {
   background-color: $color-primary;
 
+  // Should probably move this to a separate "regions" include as it defies the
+  // 'one-rule-per-statement' of a true utility function.
   &--gradient {
+    --button-ghost-background: #000;
+    --button-ghost-border: #fff;
     background-image: linear-gradient(45deg, rgba(#f7ac39, 0.7), rgba($color-primary, 0.7));
   }
 }
@@ -299,6 +303,11 @@ $flex-values: (wrap, nowrap, wrap-reverse, flex-start, flex-end, center, space-b
 
 .block {
   display: block;
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hide {
