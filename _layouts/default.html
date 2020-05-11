@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    
     <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/favicon-16x16.png">
@@ -34,6 +36,6 @@
     <main class="margin-top-0">
       {{ content }}
     </main>
-    <!-- {% include footer.html %} -->
+    {% include footer.html %}
   </body>
 </html>
