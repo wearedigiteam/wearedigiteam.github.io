@@ -127,3 +127,13 @@
     margin: ($gutter / 2);
   }
 }
+
+.l-grid-services {
+  display: grid;
+  gap: calc(var(--grid-gutter) * 2) var(--grid-gutter);
+  grid-template-columns: repeat(auto-fit, minmax(17.1875rem, 1fr));
+
+  > * {
+    margin-top: 0;
+  }
+}
