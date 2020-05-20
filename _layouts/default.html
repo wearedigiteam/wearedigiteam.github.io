@@ -43,7 +43,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css">
   </head>
-  <body>
+  <body class="page-{{ page.permalink | slugify }}">
     {% include header.html %}
     <main class="margin-top-0">
       {{ content }}
