@@ -1,0 +1,26 @@
+div#hs-eu-cookie-confirmation {
+  margin-top: 0 !important;
+  box-shadow: none !important;
+  div#hs-eu-cookie-confirmation-inner a {
+    color: $color-primary !important;
+  }
+  div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button {
+    background: transparent !important;
+    color: #ef5a27 !important;
+    border-radius: 0 !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    border-width: 2px !important;
+
+    &:hover,
+    &:focus {
+      background: #000 !important;
+      color: #fff;
+    }
+  }
+  div#hs-eu-cookie-confirmation-inner p {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif !important;
+  }
+}
