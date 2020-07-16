@@ -1,4 +1,4 @@
-div#hs-eu-cookie-confirmation {
+body div#hs-eu-cookie-confirmation {
   margin-top: 0 !important;
   box-shadow: none !important;
   div#hs-eu-cookie-confirmation-inner a {
@@ -15,7 +15,7 @@ div#hs-eu-cookie-confirmation {
     &:hover,
     &:focus {
       background: #000 !important;
-      color: #fff;
+      color: #fff !important;
     }
   }
   div#hs-eu-cookie-confirmation-inner p {
