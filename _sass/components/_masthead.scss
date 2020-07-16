@@ -24,7 +24,7 @@
   &--mini {
     min-height: 100px;
     background: #000;
-    @include media("=small") {
+    @include media("small") {
       min-height: 80px;
     }
   }
