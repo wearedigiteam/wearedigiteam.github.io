@@ -11,8 +11,12 @@
   width: 100%;
   max-width: 1600px;
   transform: translateX(-50%);
-  
+
   @include media(">=small") {
     padding: 0.625rem;
   }
+}
+
+.page-internal .c-menu-primary {
+  margin-top: 0 !important;
 }

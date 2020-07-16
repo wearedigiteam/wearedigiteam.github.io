@@ -1,5 +1,7 @@
 .c-masthead {
-  background: #000 url("../images/shallow-focus-photography-of-macbook-792199.webp") 50% 100%/cover no-repeat;
+  background: #000
+    url("../images/shallow-focus-photography-of-macbook-792199.webp") 50% 100% /
+    cover no-repeat;
   color: #fff;
   min-height: 75vh;
   // height: 100vh;
@@ -17,6 +19,14 @@
 
   &--full {
     min-height: 100%;
+  }
+
+  &--mini {
+    min-height: 100px;
+    background: #000;
+    @include media("=small") {
+      min-height: 80px;
+    }
   }
 
   &::after {

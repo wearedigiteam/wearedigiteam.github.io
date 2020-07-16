@@ -4,9 +4,14 @@ body {
   grid-template-rows: 1fr auto;
 }
 
-.l-region {  
+.l-region {
   background-color: #fff;
   margin-top: 0;
   padding-bottom: var(--region-padding, 6.25rem);
   padding-top: var(--region-padding, 6.25rem);
+}
+
+.page-internal .l-region {
+  padding-bottom: var(--region-padding, 2.25rem);
+  padding-top: var(--region-padding, 2.25rem);
 }

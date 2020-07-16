@@ -3,9 +3,8 @@
 
 // @include fluid-type(font-size, 20em, map-get($breakpoints, '1440px'), 1.5rem, $typography-display4);
 
-// Note: Base font size is used as the value that all components hang off in 
+// Note: Base font size is used as the value that all components hang off in
 // terms of their overall size.
-
 
 // https://blog.logrocket.com/the-elements-of-responsive-typography/
 // h1 {
@@ -46,24 +45,42 @@ h2,
   font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.2;
-} 
+}
 
 // Monserrat | 25 pixels | Light | Black
 h3,
 .o-text-h3 {
-  @include fluid-type(font-size, $breakpoint-min, $breakpoint-max, 0.9375em, 1.5625em);
+  @include fluid-type(
+    font-size,
+    $breakpoint-min,
+    $breakpoint-max,
+    0.9375em,
+    1.5625em
+  );
 }
 
 // Open Sans | 20 pixels | Semi-Bold | Black
 h4,
 .o-text-h4 {
-  @include fluid-type(font-size, $breakpoint-min, $breakpoint-max, 0.875em, 1.25em);
+  @include fluid-type(
+    font-size,
+    $breakpoint-min,
+    $breakpoint-max,
+    0.875em,
+    1.25em
+  );
 }
 
 // Monserrat | 20 pixels | Light | Black
 h5,
 .o-text-h5 {
-  @include fluid-type(font-size, $breakpoint-min, $breakpoint-max, 0.875em, 1.25em);
+  @include fluid-type(
+    font-size,
+    $breakpoint-min,
+    $breakpoint-max,
+    0.875em,
+    1.25em
+  );
 }
 
 // h6,
@@ -86,4 +103,8 @@ h5,
 
 .o-text-small {
   font-size: 0.75rem;
+}
+
+.o-text-medium {
+  font-weight: 400;
 }
